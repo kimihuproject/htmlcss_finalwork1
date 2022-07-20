@@ -1,0 +1,308 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: middle;
+}
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*表尾 */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.footer-logo{
+    background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/footerLogo.png) no-repeat left bottom;
+    width: 224px;
+    height: 50px;
+    display: block;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.footer ul li, .footer ul li a{
+    font-size: 14px;
+    padding: 3px;
+    margin: 3px 0px;
+    color: #019858;
+    position: relative;
+}
+
+.footer ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0px;
+    border-bottom: 2px solid #4EFEB3;
+    transition: 0.5s;
+}
+.footer ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+/*置底按鈕 */
+.stick-top{
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    bottom: 0;
+}
+.stick-top a{
+    font-size: 14px;
+    color: saddlebrown;
+    background-color: rgba(150,254,13,0.5);
+    padding: 5px;
+    border-radius: 10px;
+}
+.stick-top a:hover{
+    background-color:rgba(0, 96, 48,0.5) ;
+    color: azure;
+}
+/*社群媒體連結 */
+.socialmedia{
+    background-color:#eee ;
+}
+.socialmedia ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.socialmedia ul li{
+    font-size: 16px;
+}
+.socialmedia li a{
+    display: flex;
+    align-items: center;
+}
+.socialmedia li a:hover{
+    font-weight: bolder;
+}
+.socialmedia li a img{
+    margin-right: 5px;
+}
+.socialmedia .fb {
+    color:#4460A0 ;
+    padding: 10px;
+}
+.socialmedia .twitter {
+    color: #00AAEC;
+    padding: 10px;
+    padding-left: 0px;
+}
+.socialmedia ul li:first-child ::after{
+    content: '|';
+    color: gray;
+    font-weight: bolder;
+    padding-left:10px ;
+}
+/*選單*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.header  h1 a{
+    background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png) no-repeat left bottom;
+    width: 224px;
+    height: 50px;
+    display: block;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.header .nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.header .nav li a{
+    display: flex;
+    padding: 15px;
+    font-size: 18px;
+    color: #00CC99;
+}
+.header .nav li a:hover {
+    background: #4EFEB3;
+    color: aliceblue;
+    border-radius: 5px;
+}
+/*BANNER*/
+.banner{
+    background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png);
+    background-size:cover ;
+    padding: 173px 0px;
+    display: flex;
+    align-items: center;
+    margin:15px auto;
+}
+.banner h2{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 28px;
+    font-weight: bolder;
+    padding: 40px 20px;
+}
+/*課程清單*/
+.course {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px 0px;
+}
+.course .course-item{
+    display: block;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid gainsboro;
+    box-shadow:5px 5px 5px gainsboro ;
+    border-radius: 5%;
+    margin: 30px;
+}
+
+.course-item h3{
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px 0px;
+}
+.course-item p{
+    line-height: 1.5;
+    font-size: 20px;
+}
+.course-item img{
+    display: block;
+    margin: 0 auto;
+}
+.jQuery-list li{
+    list-style: disc;
+    margin: 2px;
+    margin-left: 20px;
+}
+/*比較表格*/
+.opposite{
+    padding: 10px;
+    margin: 50px 0px;
+}
+.opposite h4{
+    text-align: center;
+    font-size: 26px;
+    color: #019858;
+    margin: 15px 0px;
+}
+.opposite table{
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+.opposite th,.opposite td{
+    font-size: 18px;
+    border-bottom: 1px solid gainsboro;
+    padding: 20px;
+}
+.opposite th{
+    background-color: rgb(206, 236, 224);
+}
+.opposite-point{
+    font-weight: bolder;
+    color: #019858;
+    position: relative;
+}
+.opposite table td:hover{
+    background-color: #75c3a1;
+    color: #eee;
+}
+/*聯絡資料*/
+.contact{
+    margin: 0 auto;
+    background: linear-gradient(#00644b, #009872);
+    color: white;
+    padding: 30px ;
+}
+.contact h4{
+    text-align: center;
+    padding: 20px 0px;
+    line-height: 1.5;
+}
+.contact form{
+    display: flex;
+    justify-content: space-around;
+}
+.contact textarea{
+    border-radius: 5px;
+    width: 45%;
+    padding: 10px;
+}
+.contact .info {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+}
+.contact .info label, .contact .info input{
+margin-bottom: 10px;
+font-size: 18px;
+}
+.contact .info input{
+    padding: 10px;
+}
+.contact .btn{
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+.contact .btn:hover{
+    background-color: gold}
+
